@@ -1,5 +1,7 @@
 # HappyHorse by Ace Data Cloud for GitHub Copilot
 
+![HappyHorse service icon; integration provided by Ace Data Cloud](assets/icon.jpg)
+
 [简体中文](README.zh-CN.md)
 
 A separately installable HappyHorse plugin for Copilot CLI and repository cloud-agent plugin configuration. Ace Data Cloud provides this integration and its API access; this is not an official plugin from the HappyHorse service owner. It does not change Copilot's LLM provider.

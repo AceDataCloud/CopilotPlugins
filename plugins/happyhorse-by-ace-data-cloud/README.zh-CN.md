@@ -1,5 +1,7 @@
 # GitHub Copilot 的 HappyHorse by Ace Data Cloud 插件
 
+![HappyHorse 服务图标，集成由 Ace Data Cloud 提供](assets/icon.jpg)
+
 [English](README.md)
 
 这是 Ace Data Cloud 提供的独立 HappyHorse 集成，不冒充该服务官方。只安装这一项即可获得对应工具与同任务查询指引；不会增加或替换 Copilot 的默认 LLM 提供商。

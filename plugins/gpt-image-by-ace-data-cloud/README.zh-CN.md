@@ -1,5 +1,7 @@
 # GitHub Copilot 的 GPT Image by Ace Data Cloud 插件
 
+![GPT Image 服务图标，集成由 Ace Data Cloud 提供](assets/icon.png)
+
 [English](README.md)
 
 这是 Ace Data Cloud 提供的独立 GPT Image 集成，不冒充该服务官方。只安装这一项即可获得对应工具与同任务查询指引；不会增加或替换 Copilot 的默认 LLM 提供商。

@@ -27,7 +27,7 @@ def main():
         manifest = {'$schema':'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json', 'name':slug,
                     'version':CATALOG['version'], 'description':description,
                     'author':{'name':'Ace Data Cloud','url':'https://github.com/AceDataCloud'},
-                    'repository':REPO,'homepage':REPO+'/tree/main/plugins/'+slug,'license':'MIT','keywords':service['keywords']}
+                    'repository':REPO,'homepage':REPO,'license':'MIT','keywords':service['keywords']}
         mcp = {'$schema':'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json', 'mcpServers':{
             'ace-'+service['id']:{'type':'stdio','command':'python3','args':['${PLUGIN_ROOT}/scripts/mcp_bridge.py']}}}
         for name, data in [('plugin.json',manifest),('mcp.json',mcp),('service.json',service)]:
@@ -56,7 +56,10 @@ Keys are supplied privately by the environment. Never print a key, put it in a p
         example=(f'Use {service["inspect_tool"]} only. Do not generate media.' if service['inspect_tool'] else 'List the tools from ace-nano-banana. Do not call image generation.')
         task_example=f'Use {service["query_tool"]} only for task ID TASK_ID. Do not generate again. Report pending, failed or terminal success and return the media link if finished.'
         paths=', '.join('`'+x+'`' for x in service['api_paths'])
+        icon_name='icon.jpg' if service['id']=='happyhorse' else 'icon.png'
         text=f'''# {title} by Ace Data Cloud for GitHub Copilot
+
+![{title} service icon; integration provided by Ace Data Cloud](assets/{icon_name})
 
 [简体中文](README.zh-CN.md)
 
@@ -124,6 +127,8 @@ Only the names in `service.json` are exposed by the transport filter, including 
 '''
         (target/'README.md').write_text(text)
         zh=f'''# GitHub Copilot 的 {title} by Ace Data Cloud 插件
+
+![{title} 服务图标，集成由 Ace Data Cloud 提供](assets/{icon_name})
 
 [English](README.md)
 

@@ -1,0 +1,42 @@
+[
+  {
+    "plugin": "suno-by-ace-data-cloud",
+    "path": "plugins/suno-by-ace-data-cloud/assets/icon.png",
+    "source_url": "https://github.com/AceDataCloud/MCPs/blob/4a2abb23a6f19ea8460c4883dabb5ad378a428b7/suno/vscode/icon.png",
+    "blob_sha": "97eb82e643e7165a4c24481c0552602e09371e1a",
+    "date": "2026-10-18",
+    "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  },
+  {
+    "plugin": "seedance-by-ace-data-cloud",
+    "path": "plugins/seedance-by-ace-data-cloud/assets/icon.png",
+    "source_url": "https://github.com/AceDataCloud/MCPs/blob/4a2abb23a6f19ea8460c4883dabb5ad378a428b7/seedance/vscode/icon.png",
+    "blob_sha": "c85aa0b43efbae4b58407794ae43999c12046d33",
+    "date": "2026-10-18",
+    "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  },
+  {
+    "plugin": "gpt-image-by-ace-data-cloud",
+    "path": "plugins/gpt-image-by-ace-data-cloud/assets/icon.png",
+    "source_url": "https://github.com/AceDataCloud/MCPs/blob/4a2abb23a6f19ea8460c4883dabb5ad378a428b7/openai/vscode/icon.png",
+    "blob_sha": "b2fb672e165f4fa8471892955cda1091c74a4ca0",
+    "date": "2026-10-18",
+    "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  },
+  {
+    "plugin": "nano-banana-by-ace-data-cloud",
+    "path": "plugins/nano-banana-by-ace-data-cloud/assets/icon.png",
+    "source_url": "https://github.com/AceDataCloud/MCPs/blob/4a2abb23a6f19ea8460c4883dabb5ad378a428b7/nanobanana/vscode/icon.png",
+    "blob_sha": "bcd149e165ee97a9043ce07933850d4e65b0e65d",
+    "date": "2026-10-18",
+    "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  },
+  {
+    "plugin": "happyhorse-by-ace-data-cloud",
+    "path": "plugins/happyhorse-by-ace-data-cloud/assets/icon.jpg",
+    "source_url": "https://github.com/AceDataCloud/HappyHorseDify/blob/main/_assets/icon.jpg",
+    "blob_sha": "8c4738753bbca81b3201022720171ce6e1502cc9",
+    "date": "2026-10-18",
+    "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  }
+]
