@@ -1,0 +1,31 @@
+{
+  "id": "gpt-image",
+  "title": "GPT Image",
+  "slug": "gpt-image-by-ace-data-cloud",
+  "package": "mcp-openai-pro",
+  "version": "2026.10.17.0",
+  "repo": "OpenAIMCP",
+  "keywords": [
+    "gpt-image",
+    "image",
+    "openai",
+    "copilot",
+    "acedatacloud"
+  ],
+  "tools": [
+    "openai_generate_image",
+    "openai_edit_image",
+    "openai_list_image_models",
+    "openai_get_task"
+  ],
+  "inspect_tool": "openai_list_image_models",
+  "create_tool": "openai_generate_image",
+  "query_tool": "openai_get_task",
+  "api_paths": [
+    "/openai/images/generations",
+    "/openai/images/edits",
+    "/openai/tasks"
+  ],
+  "output": "image",
+  "skill": "gpt-image"
+}

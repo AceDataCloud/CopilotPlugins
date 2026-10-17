@@ -1,0 +1,112 @@
+{
+  "name": "ace-data-cloud",
+  "owner": {
+    "name": "Ace Data Cloud",
+    "email": "dev@acedata.cloud"
+  },
+  "metadata": {
+    "description": "Independent Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "suno-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "Suno by Ace Data Cloud: create audio, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/suno-by-ace-data-cloud",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "suno",
+        "music",
+        "audio",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/suno-by-ace-data-cloud"
+    },
+    {
+      "name": "seedance-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "Seedance by Ace Data Cloud: create video, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/seedance-by-ace-data-cloud",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "seedance",
+        "video",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/seedance-by-ace-data-cloud"
+    },
+    {
+      "name": "happyhorse-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "HappyHorse by Ace Data Cloud: create video, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/happyhorse-by-ace-data-cloud",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "happyhorse",
+        "happy-horse",
+        "video",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/happyhorse-by-ace-data-cloud"
+    },
+    {
+      "name": "gpt-image-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "GPT Image by Ace Data Cloud: create image, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/gpt-image-by-ace-data-cloud",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "gpt-image",
+        "image",
+        "openai",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/gpt-image-by-ace-data-cloud"
+    },
+    {
+      "name": "nano-banana-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "Nano Banana by Ace Data Cloud: create image, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/nano-banana-by-ace-data-cloud",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "nano-banana",
+        "nanobanana",
+        "image",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/nano-banana-by-ace-data-cloud"
+    }
+  ]
+}

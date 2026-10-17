@@ -1,0 +1,30 @@
+{
+  "id": "happyhorse",
+  "title": "HappyHorse",
+  "slug": "happyhorse-by-ace-data-cloud",
+  "package": "mcp-happyhorse",
+  "version": "2026.10.12.0",
+  "repo": "HappyHorseMCP",
+  "keywords": [
+    "happyhorse",
+    "happy-horse",
+    "video",
+    "copilot",
+    "acedatacloud"
+  ],
+  "tools": [
+    "happyhorse_generate_video",
+    "happyhorse_generate_video_from_image",
+    "happyhorse_list_models",
+    "happyhorse_get_task"
+  ],
+  "inspect_tool": "happyhorse_list_models",
+  "create_tool": "happyhorse_generate_video",
+  "query_tool": "happyhorse_get_task",
+  "api_paths": [
+    "/happyhorse/videos",
+    "/happyhorse/tasks"
+  ],
+  "output": "video",
+  "skill": "happyhorse-video"
+}

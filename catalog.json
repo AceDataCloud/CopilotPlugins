@@ -1,0 +1,155 @@
+{
+  "version": "0.1.0",
+  "services": [
+    {
+      "id": "suno",
+      "title": "Suno",
+      "slug": "suno-by-ace-data-cloud",
+      "package": "mcp-suno",
+      "version": "2026.10.12.1",
+      "repo": "SunoMCP",
+      "keywords": [
+        "suno",
+        "music",
+        "audio",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "suno_generate_music",
+        "suno_generate_custom_music",
+        "suno_list_models",
+        "suno_get_task"
+      ],
+      "inspect_tool": "suno_list_models",
+      "create_tool": "suno_generate_music",
+      "query_tool": "suno_get_task",
+      "api_paths": [
+        "/suno/audios",
+        "/suno/tasks"
+      ],
+      "output": "audio",
+      "skill": "suno-music"
+    },
+    {
+      "id": "seedance",
+      "title": "Seedance",
+      "slug": "seedance-by-ace-data-cloud",
+      "package": "mcp-seedance",
+      "version": "2026.10.12.1",
+      "repo": "SeedanceMCP",
+      "keywords": [
+        "seedance",
+        "video",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "seedance_generate_video",
+        "seedance_generate_video_from_image",
+        "seedance_list_models",
+        "seedance_list_resolutions",
+        "seedance_get_task"
+      ],
+      "inspect_tool": "seedance_list_models",
+      "create_tool": "seedance_generate_video",
+      "query_tool": "seedance_get_task",
+      "api_paths": [
+        "/seedance/videos",
+        "/seedance/tasks"
+      ],
+      "output": "video",
+      "skill": "seedance-video"
+    },
+    {
+      "id": "happyhorse",
+      "title": "HappyHorse",
+      "slug": "happyhorse-by-ace-data-cloud",
+      "package": "mcp-happyhorse",
+      "version": "2026.10.12.0",
+      "repo": "HappyHorseMCP",
+      "keywords": [
+        "happyhorse",
+        "happy-horse",
+        "video",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "happyhorse_generate_video",
+        "happyhorse_generate_video_from_image",
+        "happyhorse_list_models",
+        "happyhorse_get_task"
+      ],
+      "inspect_tool": "happyhorse_list_models",
+      "create_tool": "happyhorse_generate_video",
+      "query_tool": "happyhorse_get_task",
+      "api_paths": [
+        "/happyhorse/videos",
+        "/happyhorse/tasks"
+      ],
+      "output": "video",
+      "skill": "happyhorse-video"
+    },
+    {
+      "id": "gpt-image",
+      "title": "GPT Image",
+      "slug": "gpt-image-by-ace-data-cloud",
+      "package": "mcp-openai-pro",
+      "version": "2026.10.17.0",
+      "repo": "OpenAIMCP",
+      "keywords": [
+        "gpt-image",
+        "image",
+        "openai",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "openai_generate_image",
+        "openai_edit_image",
+        "openai_list_image_models",
+        "openai_get_task"
+      ],
+      "inspect_tool": "openai_list_image_models",
+      "create_tool": "openai_generate_image",
+      "query_tool": "openai_get_task",
+      "api_paths": [
+        "/openai/images/generations",
+        "/openai/images/edits",
+        "/openai/tasks"
+      ],
+      "output": "image",
+      "skill": "gpt-image"
+    },
+    {
+      "id": "nano-banana",
+      "title": "Nano Banana",
+      "slug": "nano-banana-by-ace-data-cloud",
+      "package": "mcp-nanobanana-pro",
+      "version": "2026.10.12.1",
+      "repo": "NanoBananaMCP",
+      "keywords": [
+        "nano-banana",
+        "nanobanana",
+        "image",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "nanobanana_generate_image",
+        "nanobanana_edit_image",
+        "nanobanana_get_task"
+      ],
+      "inspect_tool": null,
+      "create_tool": "nanobanana_generate_image",
+      "query_tool": "nanobanana_get_task",
+      "api_paths": [
+        "/nano-banana/images",
+        "/nano-banana/tasks"
+      ],
+      "output": "image",
+      "skill": "nano-banana-image"
+    }
+  ]
+}

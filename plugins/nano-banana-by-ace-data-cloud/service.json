@@ -1,0 +1,29 @@
+{
+  "id": "nano-banana",
+  "title": "Nano Banana",
+  "slug": "nano-banana-by-ace-data-cloud",
+  "package": "mcp-nanobanana-pro",
+  "version": "2026.10.12.1",
+  "repo": "NanoBananaMCP",
+  "keywords": [
+    "nano-banana",
+    "nanobanana",
+    "image",
+    "copilot",
+    "acedatacloud"
+  ],
+  "tools": [
+    "nanobanana_generate_image",
+    "nanobanana_edit_image",
+    "nanobanana_get_task"
+  ],
+  "inspect_tool": null,
+  "create_tool": "nanobanana_generate_image",
+  "query_tool": "nanobanana_get_task",
+  "api_paths": [
+    "/nano-banana/images",
+    "/nano-banana/tasks"
+  ],
+  "output": "image",
+  "skill": "nano-banana-image"
+}

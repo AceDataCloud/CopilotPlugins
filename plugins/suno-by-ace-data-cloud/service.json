@@ -1,0 +1,30 @@
+{
+  "id": "suno",
+  "title": "Suno",
+  "slug": "suno-by-ace-data-cloud",
+  "package": "mcp-suno",
+  "version": "2026.10.12.1",
+  "repo": "SunoMCP",
+  "keywords": [
+    "suno",
+    "music",
+    "audio",
+    "copilot",
+    "acedatacloud"
+  ],
+  "tools": [
+    "suno_generate_music",
+    "suno_generate_custom_music",
+    "suno_list_models",
+    "suno_get_task"
+  ],
+  "inspect_tool": "suno_list_models",
+  "create_tool": "suno_generate_music",
+  "query_tool": "suno_get_task",
+  "api_paths": [
+    "/suno/audios",
+    "/suno/tasks"
+  ],
+  "output": "audio",
+  "skill": "suno-music"
+}

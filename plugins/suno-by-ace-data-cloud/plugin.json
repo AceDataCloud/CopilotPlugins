@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "suno-by-ace-data-cloud",
+  "version": "0.1.0",
+  "description": "Suno by Ace Data Cloud: create audio, query the same asynchronous task, and retrieve its final media link.",
+  "author": {
+    "name": "Ace Data Cloud",
+    "url": "https://github.com/AceDataCloud"
+  },
+  "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+  "homepage": "https://github.com/AceDataCloud/CopilotPlugins/tree/main/plugins/suno-by-ace-data-cloud",
+  "license": "MIT",
+  "keywords": [
+    "suno",
+    "music",
+    "audio",
+    "copilot",
+    "acedatacloud"
+  ]
+}
