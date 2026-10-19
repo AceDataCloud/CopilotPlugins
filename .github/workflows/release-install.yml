@@ -1,0 +1,40 @@
+name: Verify public release installation
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Published Git tag to install
+        required: true
+        default: v0.1.0
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  public-install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      CI: 'true'
+      COPILOT_AUTO_UPDATE: 'false'
+      COPILOT_HOME: ${{ runner.temp }}/copilot-release-home
+      COPILOT_CACHE_HOME: ${{ runner.temp }}/copilot-release-cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install official CLI without starting inference
+        run: npm install --global @github/copilot@1.0.98
+      - name: Install five plugins from the public release
+        env:
+          RELEASE_TAG: ${{ inputs.version || github.event.release.tag_name }}
+        run: python3 scripts/verify_public_install.py --tag "$RELEASE_TAG" --output artifacts/public-install.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-release-install
+          path: artifacts/public-install.json
