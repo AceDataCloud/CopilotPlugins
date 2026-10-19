@@ -18,7 +18,9 @@ class PluginTests(unittest.TestCase):
 import sys,json
 for line in sys.stdin:
     x=json.loads(line)
-    if x.get('method')=='tools/list':
+    if x.get('method')=='initialize':
+        result={'serverInfo':{'name':'legacy-test','icons':[{'src':''},{'src':chr(1)},{'src':'https://example.com/icon.png'}]}}
+    elif x.get('method')=='tools/list':
         result={'tools':[{'name':'openai_generate_image'},{'name':'openai_get_task'},{'name':'openai_chat_completion'}]}
     elif x.get('method')=='tools/call':
         result={'content':[{'type':'text','text':x['params']['name']}]}
@@ -29,6 +31,7 @@ for line in sys.stdin:
 """)
             fake_uvx.chmod(0o755)
             messages = [
+                {"jsonrpc": "2.0", "id": 0, "method": "initialize", "params": {}},
                 {"jsonrpc": "2.0", "id": 1, "method": "tools/list"},
                 {"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "openai_chat_completion"}},
                 {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "openai_get_task", "arguments": {"task_id": "existing-test-task"}}},
@@ -40,6 +43,7 @@ for line in sys.stdin:
                                     capture_output=True, text=True, env=env, timeout=15)
             self.assertEqual(result.returncode, 0, result.stderr)
             replies = {x["id"]: x for x in map(json.loads, result.stdout.splitlines())}
+            self.assertEqual(replies[0]["result"]["serverInfo"]["icons"], [{"src": "https://example.com/icon.png"}])
             self.assertEqual([x["name"] for x in replies[1]["result"]["tools"]], ["openai_generate_image", "openai_get_task"])
             self.assertEqual(replies[2]["error"]["code"], -32601)
             self.assertEqual(replies[3]["result"]["content"][0]["text"], "openai_get_task")

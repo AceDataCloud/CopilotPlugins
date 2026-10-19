@@ -6,7 +6,7 @@
 
 A separately installable Suno plugin for Copilot CLI and repository cloud-agent plugin configuration. Ace Data Cloud provides this integration and its API access; this is not an official plugin from the Suno service owner. It does not change Copilot's LLM provider.
 
-**Release status:** version 0.1.0 is under source PR review. No listing in GitHub's built-in `awesome-copilot` marketplace is claimed. The commands below apply after the source PR is merged; before then reviewers can use the immutable PR SHA/path supplied in the review receipt. Installing a plugin does not buy service credits or start generation.
+**Source version:** 0.1.0. Use the public Ace marketplace below or pin its matching Git tag for reproducible installs. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
 
 ## 1. Install only this service
 

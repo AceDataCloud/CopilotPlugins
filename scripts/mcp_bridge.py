@@ -12,6 +12,7 @@ from pathlib import Path
 import subprocess
 import sys
 import threading
+from urllib.parse import urlsplit
 
 
 def main():
@@ -49,6 +50,7 @@ def main():
     allowed = set(spec["tools"])
     lock = threading.Lock()
     discovery_ids = set()
+    initialize_ids = set()
 
     def emit(message):
         with lock:
@@ -63,9 +65,34 @@ def main():
                 continue  # stdout is JSON-RPC only; do not surface arbitrary upstream logs.
             with lock:
                 discovery = message.get("id") in discovery_ids
+                initialize = message.get("id") in initialize_ids
                 if discovery:
                     discovery_ids.discard(message["id"])
+                if initialize:
+                    initialize_ids.discard(message["id"])
             result = message.get("result")
+            # Some published legacy packages include empty/control-character
+            # icon URLs. Omit invalid optional metadata before strict clients
+            # validate initialize; do not rewrite API behavior or tool results.
+            if initialize and isinstance(result, dict):
+                info = result.get("serverInfo")
+                if isinstance(info, dict) and isinstance(info.get("icons"), list):
+                    valid_icons = []
+                    for icon in info["icons"]:
+                        src = icon.get("src") if isinstance(icon, dict) else None
+                        if not isinstance(src, str) or any(ord(c) < 32 or c.isspace() for c in src):
+                            continue
+                        try:
+                            uri = urlsplit(src)
+                            valid = uri.scheme in {"http", "https"} and bool(uri.netloc)
+                        except ValueError:
+                            valid = False
+                        if valid or src.startswith("data:image/") and ";base64," in src:
+                            valid_icons.append(icon)
+                    if valid_icons:
+                        info["icons"] = valid_icons
+                    else:
+                        info.pop("icons", None)
             if discovery and isinstance(result, dict) and isinstance(result.get("tools"), list):
                 result["tools"] = [tool for tool in result["tools"] if tool.get("name") in allowed]
             emit(message)
@@ -88,9 +115,9 @@ def main():
                 if "id" in message:
                     emit({"jsonrpc": "2.0", "id": message["id"], "error": {"code": -32601, "message": "Tool is outside this service plugin"}})
                 continue
-            if method == "tools/list":
+            if method in {"tools/list", "initialize"}:
                 with lock:
-                    discovery_ids.add(message.get("id"))
+                    (discovery_ids if method == "tools/list" else initialize_ids).add(message.get("id"))
             child.stdin.write(json.dumps(message, separators=(",", ":")) + "\n")
             child.stdin.flush()
     except (BrokenPipeError, KeyboardInterrupt):

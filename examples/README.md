@@ -25,8 +25,9 @@ ID there. Until then, the documented alternative is a user-added marketplace:
 }
 ```
 
-The catalog's `main` install is not available until the source PR is merged.
-Reviewers should use the source PR's immutable commit SHA to inspect the package.
+The public Ace source catalog and versioned Git release are independent of
+GitHub's default marketplace approval. Pin the reviewed Git SHA/tag for a
+repeatable installation. This example still has no cloud execution receipt.
 
 For cloud execution the repository administrator must first confirm cloud agent
 availability, plugin policy, the allowed test repository, an existing seat and a

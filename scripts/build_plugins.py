@@ -65,7 +65,7 @@ Keys are supplied privately by the environment. Never print a key, put it in a p
 
 A separately installable {title} plugin for Copilot CLI and repository cloud-agent plugin configuration. Ace Data Cloud provides this integration and its API access; this is not an official plugin from the {title} service owner. It does not change Copilot's LLM provider.
 
-**Release status:** version {CATALOG['version']} is under source PR review. No listing in GitHub's built-in `awesome-copilot` marketplace is claimed. The commands below apply after the source PR is merged; before then reviewers can use the immutable PR SHA/path supplied in the review receipt. Installing a plugin does not buy service credits or start generation.
+**Source version:** {CATALOG['version']}. Use the public Ace marketplace below or pin its matching Git tag for reproducible installs. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
 
 ## 1. Install only this service
 
@@ -134,7 +134,7 @@ Only the names in `service.json` are exposed by the transport filter, including 
 
 这是 Ace Data Cloud 提供的独立 {title} 集成，不冒充该服务官方。只安装这一项即可获得对应工具与同任务查询指引；不会增加或替换 Copilot 的默认 LLM 提供商。
 
-**当前状态：** 源码 PR 审核中，尚未宣称进入 GitHub 默认 `awesome-copilot` 目录。下列 main 安装入口需源码合并后才成立；审阅者可使用交付收据中的固定 PR SHA。安装不会自动生成或充值。
+**源码版本：** {CATALOG['version']}。下面是 Ace 自有公开目录安装入口；也可固定对应 Git tag 以重复安装同版。GitHub 默认 `awesome-copilot` 目录需独立审核，此处不宣称已收录。安装不会自动生成或充值。
 
 ## 1. 安装单服务插件
 
