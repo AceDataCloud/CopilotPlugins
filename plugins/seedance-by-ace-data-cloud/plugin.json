@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "seedance-by-ace-data-cloud",
+  "version": "0.1.0",
+  "description": "Seedance by Ace Data Cloud: create video, query the same asynchronous task, and retrieve its final media link.",
+  "author": {
+    "name": "Ace Data Cloud",
+    "url": "https://github.com/AceDataCloud"
+  },
+  "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+  "homepage": "https://github.com/AceDataCloud/CopilotPlugins",
+  "license": "MIT",
+  "keywords": [
+    "seedance",
+    "video",
+    "copilot",
+    "acedatacloud"
+  ]
+}

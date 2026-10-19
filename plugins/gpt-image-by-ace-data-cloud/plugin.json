@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gpt-image-by-ace-data-cloud",
+  "version": "0.1.0",
+  "description": "GPT Image by Ace Data Cloud: create image, query the same asynchronous task, and retrieve its final media link.",
+  "author": {
+    "name": "Ace Data Cloud",
+    "url": "https://github.com/AceDataCloud"
+  },
+  "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+  "homepage": "https://github.com/AceDataCloud/CopilotPlugins",
+  "license": "MIT",
+  "keywords": [
+    "gpt-image",
+    "image",
+    "openai",
+    "copilot",
+    "acedatacloud"
+  ]
+}

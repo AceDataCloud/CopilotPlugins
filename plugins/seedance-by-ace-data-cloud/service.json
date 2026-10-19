@@ -1,0 +1,30 @@
+{
+  "id": "seedance",
+  "title": "Seedance",
+  "slug": "seedance-by-ace-data-cloud",
+  "package": "mcp-seedance",
+  "version": "2026.10.12.1",
+  "repo": "SeedanceMCP",
+  "keywords": [
+    "seedance",
+    "video",
+    "copilot",
+    "acedatacloud"
+  ],
+  "tools": [
+    "seedance_generate_video",
+    "seedance_generate_video_from_image",
+    "seedance_list_models",
+    "seedance_list_resolutions",
+    "seedance_get_task"
+  ],
+  "inspect_tool": "seedance_list_models",
+  "create_tool": "seedance_generate_video",
+  "query_tool": "seedance_get_task",
+  "api_paths": [
+    "/seedance/videos",
+    "/seedance/tasks"
+  ],
+  "output": "video",
+  "skill": "seedance-video"
+}
