@@ -17,8 +17,6 @@ jobs:
     env:
       CI: 'true'
       COPILOT_AUTO_UPDATE: 'false'
-      COPILOT_HOME: ${{ runner.temp }}/copilot-release-home
-      COPILOT_CACHE_HOME: ${{ runner.temp }}/copilot-release-cache
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -27,6 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Isolate Copilot configuration and cache
+        run: |
+          echo "COPILOT_HOME=$RUNNER_TEMP/copilot-release-home" >> "$GITHUB_ENV"
+          echo "COPILOT_CACHE_HOME=$RUNNER_TEMP/copilot-release-cache" >> "$GITHUB_ENV"
       - name: Install official CLI without starting inference
         run: npm install --global @github/copilot@1.0.98
       - name: Install five plugins from the public release

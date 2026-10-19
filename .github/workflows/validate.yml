@@ -10,6 +10,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+      - name: Validate all GitHub workflow contexts
+        run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12 -shellcheck= -pyflakes=
       - run: python3 scripts/build_plugins.py
       - run: git diff --exit-code
       - run: python3 -m unittest discover -s tests -v
