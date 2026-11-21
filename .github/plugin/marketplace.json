@@ -5,7 +5,7 @@
     "email": "dev@acedata.cloud"
   },
   "metadata": {
-    "description": "Independent Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.",
+    "description": "Independent ACE Music, Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.",
     "version": "0.1.0"
   },
   "plugins": [
@@ -107,6 +107,27 @@
         "acedatacloud"
       ],
       "source": "./plugins/nano-banana-by-ace-data-cloud"
+    },
+    {
+      "name": "ace-music-by-ace-data-cloud",
+      "version": "0.1.0",
+      "description": "ACE Music by Ace Data Cloud: create songs, query the same asynchronous task, and retrieve its final media link.",
+      "author": {
+        "name": "Ace Data Cloud",
+        "url": "https://github.com/AceDataCloud"
+      },
+      "homepage": "https://github.com/AceDataCloud/CopilotPlugins",
+      "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+      "license": "MIT",
+      "keywords": [
+        "acemusic",
+        "ace-music",
+        "music",
+        "audio",
+        "copilot",
+        "acedatacloud"
+      ],
+      "source": "./plugins/ace-music-by-ace-data-cloud"
     }
   ]
 }

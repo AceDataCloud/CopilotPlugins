@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ace-music-by-ace-data-cloud",
+  "version": "0.1.0",
+  "description": "ACE Music by Ace Data Cloud: create songs, query the same asynchronous task, and retrieve its final media link.",
+  "author": {
+    "name": "Ace Data Cloud",
+    "url": "https://github.com/AceDataCloud"
+  },
+  "repository": "https://github.com/AceDataCloud/CopilotPlugins",
+  "homepage": "https://github.com/AceDataCloud/CopilotPlugins",
+  "license": "MIT",
+  "keywords": [
+    "acemusic",
+    "ace-music",
+    "music",
+    "audio",
+    "copilot",
+    "acedatacloud"
+  ]
+}

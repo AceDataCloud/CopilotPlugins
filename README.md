@@ -4,6 +4,7 @@ Five separately installable integrations provided by **Ace Data Cloud**:
 
 | Plugin | Use | Setup |
 | --- | --- | --- |
+| ACE Music by Ace Data Cloud | Songs, lyrics, reference upload, covers, mashups and original-task lookup | [English](plugins/ace-music-by-ace-data-cloud/README.md) / [中文](plugins/ace-music-by-ace-data-cloud/README.zh-CN.md) |
 | Suno by Ace Data Cloud | Music generation and existing audio-task lookup | [English](plugins/suno-by-ace-data-cloud/README.md) / [中文](plugins/suno-by-ace-data-cloud/README.zh-CN.md) |
 | Seedance by Ace Data Cloud | Video generation and same-task lookup | [English](plugins/seedance-by-ace-data-cloud/README.md) / [中文](plugins/seedance-by-ace-data-cloud/README.zh-CN.md) |
 | HappyHorse by Ace Data Cloud | Video generation and same-task lookup | [English](plugins/happyhorse-by-ace-data-cloud/README.md) / [中文](plugins/happyhorse-by-ace-data-cloud/README.zh-CN.md) |

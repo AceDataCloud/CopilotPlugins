@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Materialize five independently installable Agent Plugins from one catalog."""
+"""Materialize independently installable Agent Plugins from one catalog."""
 import json
 from pathlib import Path
 import shutil
@@ -173,7 +173,7 @@ CLI：在启动 Copilot 的私有 shell/secret manager 中设置 `ACEDATACLOUD_{
 '''
         (target/'README.zh-CN.md').write_text(zh)
         entries.append({**{key:manifest[key] for key in ['name','version','description','author','homepage','repository','license','keywords']},'source':'./plugins/'+slug})
-    marketplace={'name':'ace-data-cloud','owner':{'name':'Ace Data Cloud','email':'dev@acedata.cloud'},'metadata':{'description':'Independent Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.','version':CATALOG['version']},'plugins':entries}
+    marketplace={'name':'ace-data-cloud','owner':{'name':'Ace Data Cloud','email':'dev@acedata.cloud'},'metadata':{'description':'Independent ACE Music, Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.','version':CATALOG['version']},'plugins':entries}
     p=ROOT/'.github/plugin';p.mkdir(parents=True,exist_ok=True);(p/'marketplace.json').write_text(json.dumps(marketplace,indent=2)+'\n')
 
 
