@@ -11,8 +11,8 @@ KEY_IMAGE = 'https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e7
 CREATE_IMAGE = 'https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/create-api-key-en.png'
 
 
-def cta(path, content):
-    return f'https://platform.acedata.cloud/{path}?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content={content}'
+def cta(path):
+    return f'https://platform.acedata.cloud/{path}?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen'
 
 
 def main():
@@ -79,8 +79,8 @@ Once an official listing is approved, its exact listing link and official instal
 
 ## 2. Register or sign in and get the right key
 
-1. Open [Ace Data Cloud Applications]({cta('console/applications',slug+'_key')}) and register/sign in. If necessary choose **Initialize General Application**.
-2. Open **General application**, check {title} access, [current pricing]({cta('models',slug+'_pricing')}) and balance. Copy its API key, or choose **Manage Keys → Create** for a dedicated Copilot key.
+1. Open [Ace Data Cloud Applications]({cta('console/applications')}) and register/sign in. If necessary choose **Initialize General Application**.
+2. Open **General application**, check {title} access, [current pricing]({cta('models')}) and balance. Copy its API key, or choose **Manage Keys → Create** for a dedicated Copilot key.
 3. Set expiry and restrictions appropriate to your workflow. If **Allowed APIs** is enabled, permit generation **and** task retrieval: {paths}. Copy the token value without `Bearer `; a `platform-...` management token is not a service API key.
 
 ![Existing real Ace console screenshot: copy API key or Manage Keys]({KEY_IMAGE})
@@ -117,7 +117,7 @@ Pending means wait and query the same task. Terminal success plus the final medi
 - Plugin missing: register `AceDataCloud/CopilotPlugins`, then install the exact `{slug}` entry; official catalog approval is separate.
 - `uvx` or Python missing / package download fails: install those dependencies from official sources and check network access; do not insert an unrelated package or fallback model.
 - Authentication error: confirm the **service API key**, its service/API scope and expiry. Never send the value in an issue.
-- Insufficient balance: check [current usage]({cta('console/usage',slug+'_usage')}) and pricing before new work. No payment is performed automatically.
+- Insufficient balance: check [current usage]({cta('console/usage')}) and pricing before new work. No payment is performed automatically.
 - Policy/secret unavailable in cloud: an existing administrator must confirm Copilot availability, plugin policy and Agents secret access; this plugin does not bypass policy.
 - Task pending: query the saved ID. Moderation and rate-limit errors keep their upstream meaning.
 
@@ -148,7 +148,7 @@ Only the names in `service.json` are exposed by the transport filter, including 
 
 ## 2. 注册、登录与 API Token
 
-打开 [Ace Applications]({cta('console/applications',slug+'_zh_key')}) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 {title} 权限、[当前价格]({cta('models',slug+'_zh_pricing')})和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：{paths}。
+打开 [Ace Applications]({cta('console/applications')}) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 {title} 权限、[当前价格]({cta('models')})和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：{paths}。
 
 ![真实 Ace 控制台原图：复制或管理 key]({KEY_IMAGE})
 ![真实 Ace 控制台原图：创建独立 key]({CREATE_IMAGE})
@@ -169,7 +169,7 @@ CLI：在启动 Copilot 的私有 shell/secret manager 中设置 `ACEDATACLOUD_{
 
 ## 常见问题
 
-找不到插件先确认已加入 Ace 目录并安装精确名称 `{slug}`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量]({cta('console/usage',slug+'_zh_usage')})。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。
+找不到插件先确认已加入 Ace 目录并安装精确名称 `{slug}`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量]({cta('console/usage')})。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。
 '''
         (target/'README.zh-CN.md').write_text(zh)
         entries.append({**{key:manifest[key] for key in ['name','version','description','author','homepage','repository','license','keywords']},'source':'./plugins/'+slug})
