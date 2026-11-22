@@ -21,7 +21,7 @@ copilot plugin install suno-by-ace-data-cloud@ace-data-cloud
 
 ## 2. 注册、登录与 API Token
 
-打开 [Ace Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=suno-by-ace-data-cloud_zh_key) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 Suno 权限、[当前价格](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=suno-by-ace-data-cloud_zh_pricing)和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：`/suno/audios`, `/suno/tasks`。
+打开 [Ace Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 Suno 权限、[当前价格](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen)和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：`/suno/audios`, `/suno/tasks`。
 
 ![真实 Ace 控制台原图：复制或管理 key](https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/get-api-key-en.png)
 ![真实 Ace 控制台原图：创建独立 key](https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/create-api-key-en.png)
@@ -42,4 +42,4 @@ CLI：在启动 Copilot 的私有 shell/secret manager 中设置 `ACEDATACLOUD_S
 
 ## 常见问题
 
-找不到插件先确认已加入 Ace 目录并安装精确名称 `suno-by-ace-data-cloud`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=suno-by-ace-data-cloud_zh_usage)。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。
+找不到插件先确认已加入 Ace 目录并安装精确名称 `suno-by-ace-data-cloud`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen)。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。
