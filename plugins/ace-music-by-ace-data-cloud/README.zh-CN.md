@@ -6,7 +6,7 @@
 
 这是 Ace Data Cloud 提供的独立 ACE Music 集成，不冒充该服务官方。只安装这一项即可获得对应工具与同任务查询指引；不会增加或替换 Copilot 的默认 LLM 提供商。
 
-**源码版本：** 0.1.0。下面是 Ace 自有公开目录安装入口；也可固定对应 Git tag 以重复安装同版。GitHub 默认 `awesome-copilot` 目录需独立审核，此处不宣称已收录。安装不会自动生成或充值。
+**源码版本：** 0.1.0。下面是 Ace 自有公开目录安装入口；也可固定包含此插件的已发布 Git tag。GitHub 默认 `awesome-copilot` 目录需独立审核，此处不宣称已收录。安装不会自动生成或充值。
 
 ## 1. 安装单服务插件
 
@@ -21,7 +21,7 @@ copilot plugin install ace-music-by-ace-data-cloud@ace-data-cloud
 
 ## 2. 注册、登录与 API Token
 
-打开 [Ace Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_zh_key) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 ACE Music 权限、[当前价格](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_zh_pricing)和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：`/acemusic/audios`, `/acemusic/lyrics`, `/acemusic/tasks`。
+打开 [Ace Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen) 注册/登录；没有通用应用时点 **Initialize General Application**。打开 **General application**，核对 ACE Music 权限、[当前价格](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen)和余额。直接复制已有 API key，或 **Manage Keys → Create** 创建独立 Copilot key；按需限制到期日、用量及 API。允许列表应含创建与查询：`/acemusic/audios`, `/acemusic/lyrics`, `/acemusic/tasks`。
 
 ![真实 Ace 控制台原图：复制或管理 key](https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/get-api-key-en.png)
 ![真实 Ace 控制台原图：创建独立 key](https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/create-api-key-en.png)
@@ -42,4 +42,4 @@ CLI：在启动 Copilot 的私有 shell/secret manager 中设置 `ACEDATACLOUD_A
 
 ## 常见问题
 
-找不到插件先确认已加入 Ace 目录并安装精确名称 `ace-music-by-ace-data-cloud`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_zh_usage)。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。
+找不到插件先确认已加入 Ace 目录并安装精确名称 `ace-music-by-ace-data-cloud`；官方默认目录收录是另一阶段。缺 Python/uvx 或包下载失败先修依赖网络，不随意换包/模型。认证失败核对服务 API key 的权限、过期日和 API 限制；余额不足先读当前价格与[用量](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen)。云端受限由现有管理员核策略与 Agents secret，不绕过。工具过滤只暴露 `service.json` 明列名称；安装并非收费授权，无自动重试、账户写入或未授权生成。

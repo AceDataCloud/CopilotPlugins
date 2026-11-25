@@ -6,7 +6,7 @@
 
 A separately installable ACE Music plugin for Copilot CLI and repository cloud-agent plugin configuration. Ace Data Cloud provides this integration and its API access; this is not an official plugin from the ACE Music service owner. It does not change Copilot's LLM provider.
 
-**Source version:** 0.1.0. Use the public Ace marketplace below or pin its matching Git tag for reproducible installs. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
+**Source version:** 0.1.0. Use the public Ace marketplace below or pin a published Git tag that includes this plugin. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
 
 ## 1. Install only this service
 
@@ -21,8 +21,8 @@ Once an official listing is approved, its exact listing link and official instal
 
 ## 2. Register or sign in and get the right key
 
-1. Open [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_key) and register/sign in. If necessary choose **Initialize General Application**.
-2. Open **General application**, check ACE Music access, [current pricing](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_pricing) and balance. Copy its API key, or choose **Manage Keys → Create** for a dedicated Copilot key.
+1. Open [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen) and register/sign in. If necessary choose **Initialize General Application**.
+2. Open **General application**, check ACE Music access, [current pricing](https://platform.acedata.cloud/models?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen) and balance. Copy its API key, or choose **Manage Keys → Create** for a dedicated Copilot key.
 3. Set expiry and restrictions appropriate to your workflow. If **Allowed APIs** is enabled, permit generation **and** task retrieval: `/acemusic/audios`, `/acemusic/lyrics`, `/acemusic/tasks`. Copy the token value without `Bearer `; a `platform-...` management token is not a service API key.
 
 ![Existing real Ace console screenshot: copy API key or Manage Keys](https://raw.githubusercontent.com/AceDataCloud/SunoDify/8d3d03570e73324220f111f7fe343da0792a8071/_assets/tutorial/get-api-key-en.png)
@@ -59,7 +59,7 @@ Pending means wait and query the same task. Terminal success plus the final medi
 - Plugin missing: register `AceDataCloud/CopilotPlugins`, then install the exact `ace-music-by-ace-data-cloud` entry; official catalog approval is separate.
 - `uvx` or Python missing / package download fails: install those dependencies from official sources and check network access; do not insert an unrelated package or fallback model.
 - Authentication error: confirm the **service API key**, its service/API scope and expiry. Never send the value in an issue.
-- Insufficient balance: check [current usage](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen&utm_content=ace-music-by-ace-data-cloud_usage) and pricing before new work. No payment is performed automatically.
+- Insufficient balance: check [current usage](https://platform.acedata.cloud/console/usage?utm_source=github_copilot&utm_medium=referral&utm_campaign=evergreen) and pricing before new work. No payment is performed automatically.
 - Policy/secret unavailable in cloud: an existing administrator must confirm Copilot availability, plugin policy and Agents secret access; this plugin does not bypass policy.
 - Task pending: query the saved ID. Moderation and rate-limit errors keep their upstream meaning.
 
