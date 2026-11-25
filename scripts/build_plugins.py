@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Materialize five independently installable Agent Plugins from one catalog."""
+"""Materialize independently installable Agent Plugins from one catalog."""
 import json
 from pathlib import Path
 import shutil
@@ -65,7 +65,7 @@ Keys are supplied privately by the environment. Never print a key, put it in a p
 
 A separately installable {title} plugin for Copilot CLI and repository cloud-agent plugin configuration. Ace Data Cloud provides this integration and its API access; this is not an official plugin from the {title} service owner. It does not change Copilot's LLM provider.
 
-**Source version:** {CATALOG['version']}. Use the public Ace marketplace below or pin its matching Git tag for reproducible installs. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
+**Source version:** {CATALOG['version']}. Use the public Ace marketplace below or pin a published Git tag that includes this plugin. GitHub's built-in `awesome-copilot` listing is a separate review and is not claimed here. Installing a plugin does not buy service credits or start generation.
 
 ## 1. Install only this service
 
@@ -134,7 +134,7 @@ Only the names in `service.json` are exposed by the transport filter, including 
 
 这是 Ace Data Cloud 提供的独立 {title} 集成，不冒充该服务官方。只安装这一项即可获得对应工具与同任务查询指引；不会增加或替换 Copilot 的默认 LLM 提供商。
 
-**源码版本：** {CATALOG['version']}。下面是 Ace 自有公开目录安装入口；也可固定对应 Git tag 以重复安装同版。GitHub 默认 `awesome-copilot` 目录需独立审核，此处不宣称已收录。安装不会自动生成或充值。
+**源码版本：** {CATALOG['version']}。下面是 Ace 自有公开目录安装入口；也可固定包含此插件的已发布 Git tag。GitHub 默认 `awesome-copilot` 目录需独立审核，此处不宣称已收录。安装不会自动生成或充值。
 
 ## 1. 安装单服务插件
 
@@ -173,7 +173,7 @@ CLI：在启动 Copilot 的私有 shell/secret manager 中设置 `ACEDATACLOUD_{
 '''
         (target/'README.zh-CN.md').write_text(zh)
         entries.append({**{key:manifest[key] for key in ['name','version','description','author','homepage','repository','license','keywords']},'source':'./plugins/'+slug})
-    marketplace={'name':'ace-data-cloud','owner':{'name':'Ace Data Cloud','email':'dev@acedata.cloud'},'metadata':{'description':'Independent Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.','version':CATALOG['version']},'plugins':entries}
+    marketplace={'name':'ace-data-cloud','owner':{'name':'Ace Data Cloud','email':'dev@acedata.cloud'},'metadata':{'description':'Independent ACE Music, Suno, Seedance, HappyHorse, GPT Image and Nano Banana integrations for GitHub Copilot.','version':CATALOG['version']},'plugins':entries}
     p=ROOT/'.github/plugin';p.mkdir(parents=True,exist_ok=True);(p/'marketplace.json').write_text(json.dumps(marketplace,indent=2)+'\n')
 
 

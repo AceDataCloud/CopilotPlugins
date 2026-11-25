@@ -38,5 +38,13 @@
     "blob_sha": "8c4738753bbca81b3201022720171ce6e1502cc9",
     "date": "2026-10-18",
     "purpose": "existing service icon in README; Ace affiliation explicit, no fake product screenshot"
+  },
+  {
+    "plugin": "ace-music-by-ace-data-cloud",
+    "path": "plugins/ace-music-by-ace-data-cloud/assets/icon.png",
+    "source_url": "https://cdn.acedata.cloud/acemusic-icon-52deddfc87b9.png",
+    "sha256": "52deddfc87b9adf1a215e4c69395c65890701ce87a5c7c084cd91b684c46ba35",
+    "date": "2026-11-22",
+    "purpose": "ACE Music service icon"
   }
 ]

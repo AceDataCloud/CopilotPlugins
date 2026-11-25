@@ -64,7 +64,7 @@ for line in sys.stdin:
         self.assertEqual(result.returncode, 2)
         self.assertNotIn("platform-unit-test-only", result.stdout + result.stderr)
 
-    def test_all_five_plugins_inspect_without_starting_or_credentials(self):
+    def test_all_plugins_inspect_without_starting_or_credentials(self):
         for service in json.loads((ROOT / "catalog.json").read_text())["services"]:
             with self.subTest(service=service["id"]):
                 plugin = ROOT / "plugins" / service["slug"]

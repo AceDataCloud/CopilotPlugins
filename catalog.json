@@ -150,6 +150,45 @@
       ],
       "output": "image",
       "skill": "nano-banana-image"
+    },
+    {
+      "id": "acemusic",
+      "title": "ACE Music",
+      "slug": "ace-music-by-ace-data-cloud",
+      "package": "mcp-acemusic",
+      "version": "2026.11.18.0",
+      "repo": "AceMusicMCP",
+      "keywords": [
+        "acemusic",
+        "ace-music",
+        "music",
+        "audio",
+        "copilot",
+        "acedatacloud"
+      ],
+      "tools": [
+        "acemusic_list_models",
+        "acemusic_get_capabilities",
+        "acemusic_generate_music",
+        "acemusic_generate_custom_music",
+        "acemusic_generate_lyrics",
+        "acemusic_upload_audio",
+        "acemusic_cover_audio",
+        "acemusic_mashup_audio",
+        "acemusic_get_task",
+        "acemusic_get_tasks_batch",
+        "acemusic_list_tasks"
+      ],
+      "inspect_tool": "acemusic_list_models",
+      "create_tool": "acemusic_generate_music",
+      "query_tool": "acemusic_get_task",
+      "api_paths": [
+        "/acemusic/audios",
+        "/acemusic/lyrics",
+        "/acemusic/tasks"
+      ],
+      "output": "songs",
+      "skill": "ace-music"
     }
   ]
 }

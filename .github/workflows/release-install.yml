@@ -19,6 +19,8 @@ jobs:
       COPILOT_AUTO_UPDATE: 'false'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.version || github.event.release.tag_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,7 +33,7 @@ jobs:
           echo "COPILOT_CACHE_HOME=$RUNNER_TEMP/copilot-release-cache" >> "$GITHUB_ENV"
       - name: Install official CLI without starting inference
         run: npm install --global @github/copilot@1.0.98
-      - name: Install five plugins from the public release
+      - name: Install plugins from the selected public release
         env:
           RELEASE_TAG: ${{ inputs.version || github.event.release.tag_name }}
         run: python3 scripts/verify_public_install.py --tag "$RELEASE_TAG" --output artifacts/public-install.json
